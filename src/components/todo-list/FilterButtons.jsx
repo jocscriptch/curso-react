@@ -1,10 +1,10 @@
 const FILTERS = [
-  { id: "all", label: "Todas" },
-  { id: "active", label: "Pendientes" },
-  { id: "done", label: "Completadas" },
+  { id: "all", label: "All" },
+  { id: "active", label: "Active" },
+  { id: "done", label: "Completed" },
 ];
 
-export default function FilterButtons({ value, onChange, pendingCount }) {
+export const FilterButtons = ({ value, onChange, pendingCount }) => {
   return (
     <div className="mt-5 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
       <div className="flex gap-2">
@@ -29,8 +29,8 @@ export default function FilterButtons({ value, onChange, pendingCount }) {
       </div>
 
       <span className="inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-700">
-        Pendientes: <b className="ml-1">{pendingCount}</b>
+        Pending: <b className="ml-1">{pendingCount}</b>
       </span>
     </div>
   );
-}
+};
