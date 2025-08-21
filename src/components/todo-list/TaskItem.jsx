@@ -7,7 +7,7 @@ export const TaskItem = ({ task, onToggle, onDelete }) => {
           checked={task.completed}
           onChange={() => onToggle(task.id)}
           className="h-4 w-4 accent-indigo-600"
-          aria-label={task.completed ? "Mark as pending" : "Mark as completed"}
+          aria-label={task.completed ? "Marcar como pendiente" : "Marcar como completada"}
         />
         <span
           className={`flex-1 select-none ${
@@ -21,10 +21,10 @@ export const TaskItem = ({ task, onToggle, onDelete }) => {
       <button
         onClick={() => onDelete(task.id)}
         className="rounded-lg bg-rose-500 px-3 py-1 text-sm font-semibold text-white opacity-90 shadow transition hover:bg-rose-600 hover:opacity-100 active:translate-y-[1px]"
-        aria-label="Delete task"
-        title="Delete"
+  aria-label="Eliminar tarea"
+  title="Eliminar"
       >
-        Delete
+        Eliminar
       </button>
     </li>
   );
