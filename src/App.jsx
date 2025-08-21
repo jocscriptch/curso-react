@@ -1,7 +1,7 @@
 import { useMemo, useReducer, useCallback } from "react";
-import TaskForm from "./components/TaskForm";
-import TaskList from "./components/TaskList";
-import FilterButtons from "./components/FilterButtons";
+import { TaskForm } from "./components/todo-list/TaskForm";
+import { TaskList } from "./components/todo-list/TaskList";
+import { FilterButtons } from "./components/todo-list/FilterButtons";
 import useLocalStorage from "./hooks/useLocalStorage";
 
 // acciones
@@ -29,7 +29,7 @@ function tasksReducer(state, action) {
   }
 }
 
-export default function App() {
+export const App = () => {
   // guardar en local storage
   const [storedTasks, setStoredTasks] = useLocalStorage("tasks", []);
   const [tasks, dispatch] = useReducer(tasksReducer, storedTasks);
