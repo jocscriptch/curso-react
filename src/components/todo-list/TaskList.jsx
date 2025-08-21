@@ -4,8 +4,8 @@ export const TaskList = ({ tasks, onToggle, onDelete }) => {
   if (tasks.length === 0) {
     return (
       <div className="mt-8 rounded-2xl border border-dashed border-gray-300 bg-white/60 p-6 text-center">
-        <p className="text-gray-500">
-          No tasks yet... <span className="font-medium text-indigo-600">add the first one!</span> ✍️
+          <p className="text-gray-500">
+            No hay tareas aún... <span className="font-medium text-indigo-600">¡agrega la primera!</span> ✍️
         </p>
       </div>
     );

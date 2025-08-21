@@ -1,7 +1,7 @@
 const FILTERS = [
-  { id: "all", label: "All" },
-  { id: "active", label: "Active" },
-  { id: "done", label: "Completed" },
+  { id: "all", label: "Todas" },
+  { id: "active", label: "Pendientes" },
+  { id: "done", label: "Completadas" },
 ];
 
 export const FilterButtons = ({ value, onChange, pendingCount }) => {
@@ -29,7 +29,7 @@ export const FilterButtons = ({ value, onChange, pendingCount }) => {
       </div>
 
       <span className="inline-flex items-center justify-center rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-700">
-        Pending: <b className="ml-1">{pendingCount}</b>
+        Pendientes: <b className="ml-1">{pendingCount}</b>
       </span>
     </div>
   );
